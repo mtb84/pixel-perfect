@@ -1,65 +1,213 @@
-header {
-    box-sizing: border-box;
-    background-color: #f9f8f8;
-    position: fixed;
-    width: vw;
-    height: 65px;
-    top: 0;
-    left: 0;
-    right: 0;
-
+* {
+  box-sizing: border-box;
 }
 
-ul {
-    list-style-type: none;
-    display: flex;
-    position: relative;
-    align-items: center;
+body {
+  text-align: center;
 }
 
-li:hover {
-    color: #b56548;
+img {
+  width: 100%;
 }
 
-.body {
-    background-color: #f4f4f4;
+img:hover {
+  cursor: zoom-in;
 }
 
 .container {
+  /* position: absolute; */
+  width: 100vw;
+  margin: auto;
+  min-height: 5134px;
+  background-color: #f4f4f4;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-flow: row wrap;
+}
 
-    position:relative;
-    width: 100vw;
-    margin: auto;
-    
+/* above the articles */
+
+header {
+  box-sizing: border-box;
+  background-color: #f9f8f8;
+  position: fixed;
+  width: 100%;
+  height: 65px;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-bottom: 1px solid #e1e1e1;
+  z-index: 10;
+  padding: 0;
+}
+
+nav {
+  color: var(--text);
+  font-size: 0.7rem;
+  display: flex;
+  min-height: 63px;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--nav-border);
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-around;
+  margin: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+  font-family: "Lato";
+}
+
+.right-side ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  font-size: 13px;
+}
+
+.right-side li:hover {
+  color: #b56548;
+  cursor: pointer;
+}
+
+.left-side {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  min-width: 317px;
+  color: #444444;
+  align-items: center;
+  font-family: "Lato";
+  font-weight: 700;
+  font-size: 11px;
+  letter-spacing: 1px;
+  float: left;
+}
+
+.left-side li {
+  padding-right: 24px;
+  letter-spacing: 0.87px;
+}
+
+.left-side li:hover {
+  color: #b56548;
+  cursor: pointer;
+  font-style: italic;
+  font-size: 13px;
+}
+
+.right-side {
+  float: right;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  height: 100%;
+  min-width: 153px;
+  color: #aaaaaa;
+}
+
+nav ul:first-of-type {
+  display: flex;
+  align-items: center;
+  padding-left: 150px;
+}
+
+nav ul:last-of-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 21.1%;
+  padding-right: 10.5%;
+  font-size: 0.83rem;
+}
+
+.right-side li:last-of-type {
+  flex: 2;
+}
+
+h3 {
+  color: #dd5b31;
+  font-size: 14px;
+}
+
+article {
+  background-color: #ffffff;
+  margin-top: 7%;
+  position: relative;
+  width: 752px;
+  min-height: fit-content;
+  margin-bottom: 48px;
+  border: 1px solid #e5e5e5;
+  border-radius: 1px;
+}
+
+nav {
+  position: relative;
+  width: 1140px;
+  height: 100%;
+  margin: auto;
+}
+
+.container {
+  position: relative;
+  width: 100vw;
+  margin: auto;
 }
 
 .continue-reading {
-    background-color: #ffffff;
-    color: #dc5d36;
-    border-color: #efaa9b;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+  background-color: #ffffff;
+  color: #dc5d36;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  margin: 35px auto 0;
+  width: 172px;
+  height: 38px;
+  border: 1px solid #efaa9b;
+  font-family: "Lato";
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 0 0 1px 0;
 }
 
 .continue-reading:hover {
-    background-color: #dc5d36;
-    color: #ffffff;
+  background-color: #dc5d36;
+  color: #ffffff;
+  font: bold;
+  font-size: 13px;
+  cursor: pointer;
 }
 
 footer {
-    background-color: #222222;
-    width: 100vw;
-    height: 1in;
+  background-color: #222222;
+  width: 100vw;
+  height: 1in;
 }
 
 .topOfPageBtn {
-    background-color: #522e21;
-    color: #656565;
+  background-color: #522e21;
+  color: #656565;
+  font: bold;
 }
 
 .topOfPageBtn:hover {
-    background-color: #b56548;
-    color: #656565;
-}   
+  background-color: #dc5d36;
+  color: #656565;
+  cursor: pointer;
+}
 
+.author-info {
+  background-color: red;
+  width: 200px;
+  height: 300px;
+}
